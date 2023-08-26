@@ -1,0 +1,24 @@
+<h2>Países</h2>
+<hr />
+<ul class="list-group">
+  <!-- <li
+    routerLink=""
+    class="list-group-item"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Home Page
+  </li>
+  <li routerLink="about" class="list-group-item" routerLinkActive="active">
+    About Page
+  </li> -->
+  <li
+    *ngFor="let side of sidebarRoutes"
+    [routerLink]="[side.path]"
+    class="list-group-item"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    {{ side.title }}
+  </li>
+</ul>
